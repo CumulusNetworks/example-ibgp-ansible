@@ -4,8 +4,7 @@
 {% set loopback_ip = intvars.loopback -%}
 {% set swbridges = intvars.bridges -%}
 
-!
-router-id {{ loopback_ip }}
+log file /var/log/quagga/quagga.log
 !
 {% if bgpvars is defined -%}
 router bgp {{ bgpvars.myasn }}
